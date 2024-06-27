@@ -48,7 +48,7 @@ export const getDataById = async (req: Request, res: Response) => {
   try {
     const userid = parseInt(req.params.userid);
     if (isNaN(userid)) {
-      return res.status(400).json({ message: "Invalid empid" });
+      return res.status(400).json({ message: "Invalid userid" });
     }
 
     const user = await getUserById(userid);
